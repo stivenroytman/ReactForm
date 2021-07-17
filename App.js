@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Butoon } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 export default function App() {
   const serverInfo = {
@@ -22,6 +22,7 @@ export default function App() {
         onChangeText={text => setUserdata({ name: text })}
         onSubmitEditing={postData}
       />
+      <Button onPress={postData} title="hey"/>
       <Text>Hello, {userdata.name}</Text>
     </>
   );
